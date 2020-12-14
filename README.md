@@ -1,87 +1,43 @@
-# Requirements
+- [Features](#sec-1)
+- [Usage](#sec-2)
+- [Screenshots](#sec-3)
 
-- See all countries. For each country the user should visualize the flag image, the name, the population and region. (You can use a grid, list, carrousel or any layout you feel is appropriate) 
-- Search for a country using an input field. 
-- Filter the list by region. 
-- Click in a country to see more information, display the full information that is provided about the country by the API. 
+# Features<a id="sec-1"></a>
 
-You have total freedom on how you want to style and design this project.  It’s also part of this assignment to evaluate your skills related to user experience and user interface. Extra points if you can add theme switching (dark and light) and responsive web design (mobile and desktop). 
+This is a web project that displays simple country data retrieved from the public REST Countries API <https://restcountries.eu>.
 
-# Approach
+-   Displays all the countries with a grid of cards. Each card allows a user to visualize the flag image, the name, the population, and the region.
+-   A text field for filtering countries by name.
+-   A form group of checkboxes for filtering countries by region.
+-   The ability to click on a country's card in order to display the full information about that country.
+-   Lazy loading. This means that rather than displaying all 250 countries at once, it only displays a few at first. Then when the user scrolls down it loads more into the display.
+-   Theme switching (dark and light).
+-   Responsive web design (mobile and desktop).
+-   An indication of the number of matching countries.
+-   A basic custom favicon.
 
-- A table. Will image display okay?
-- A grid list of cards.
+# Usage<a id="sec-2"></a>
 
-I'm leaning towards a list of cards because it is easier to handle filtering by region and searching by country.
+This project was built with Create React App and Material-UI.
 
+Use the following commands for running the app locally:
 
-# Getting Started with Create React App
+-   **`yard install`:** Run this command first to install the node packages.
+-   **`yarn start`:** Runs the app in development mode.
+-   **`yarn build`:** Builds the app for production to the `build` folder.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Alternatively, find it at <https://ruborcalor.github.io/countries>
 
-## Available Scripts
+# Screenshots<a id="sec-3"></a>
 
-In the project directory, you can run:
+![img](./screenshots/home.png)
 
-### `yarn start`
+![img](./screenshots/example_query.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![img](./screenshots/home_dark.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![img](./screenshots/country_view.png)
 
-### `yarn test`
+![img](./screenshots/home_mobile.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![img](./screenshots/country_view_mobile.png)
