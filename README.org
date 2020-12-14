@@ -1,7 +1,7 @@
 
 * Features
 
-This is a web project that displays simple country data retrieved from the public REST Countries API https://restcountries.eu.
+This is a web project that displays simple country data retrieved from the public REST Countries API (https://restcountries.eu).
 
 - Displays all the countries with a grid of cards. Each card allows a user to visualize the flag image, the name, the population, and the region.
 - A text field for filtering countries by name.

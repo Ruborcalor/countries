@@ -1,10 +1,6 @@
-- [Features](#sec-1)
-- [Usage](#sec-2)
-- [Screenshots](#sec-3)
-
 # Features<a id="sec-1"></a>
 
-This is a web project that displays simple country data retrieved from the public REST Countries API <https://restcountries.eu>.
+This is a web project that displays simple country data retrieved from the public REST Countries API (<https://restcountries.eu>).
 
 -   Displays all the countries with a grid of cards. Each card allows a user to visualize the flag image, the name, the population, and the region.
 -   A text field for filtering countries by name.
@@ -41,3 +37,25 @@ Alternatively, find it at <https://ruborcalor.github.io/countries>
 ![img](./screenshots/home_mobile.png)
 
 ![img](./screenshots/country_view_mobile.png)
+
+# Components<a id="sec-4"></a>
+
+## CountryDashboard<a id="sec-4-1"></a>
+
+Displays the search text field, the region filter, the number of matching countries, and the CountryCardGrid.
+
+## CountryCardGrid<a id="sec-4-2"></a>
+
+Displays a grid of country cards.
+
+## CountryCard<a id="sec-4-3"></a>
+
+A card that displays a country's flag, name, population, and region.
+
+## CountryView<a id="sec-4-4"></a>
+
+Displays a country's name, flag, and all of the information about that country.
+
+## SimpleAppBar<a id="sec-4-5"></a>
+
+Displays an app bar at the top of the page with the app's title and a switch for toggling the theme between light and dark mode.
