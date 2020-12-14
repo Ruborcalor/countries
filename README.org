@@ -38,4 +38,25 @@ Alternatively, find it at https://ruborcalor.github.io/countries
 
 [[file:./screenshots/country_view_mobile.png]]
 
+* Components
+
+** CountryDashboard
+
+Displays the search text field, the region filter, the number of matching countries, and the CountryCardGrid.
+
+** CountryCardGrid
+
+Displays a grid of country cards.
+
+** CountryCard
+
+A card that displays a country's flag, name, population, and region.
+
+** CountryView
+
+Displays a country's name, flag, and all of the information about that country.
+
+** SimpleAppBar
+
+Displays an app bar at the top of the page with the app's title and a switch for toggling the theme between light and dark mode.
 

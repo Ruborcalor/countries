@@ -1,35 +1,17 @@
 import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
-import PlayArrowIcon from "@material-ui/icons/PlayArrow";
-import SkipNextIcon from "@material-ui/icons/SkipNext";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import Grid from "@material-ui/core/Grid";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-  },
-  content: {
-    flex: "1 0 auto",
-  },
-  cover: {},
-}));
-
 const CountryView = (props) => {
-  const classes = useStyles();
-  const theme = useTheme();
 
+  // get the countryObject from props
   const countryObject = props.selectedCountry;
-  console.log(countryObject);
 
   return (
     <div style={{ width: "80%", margin: "40px auto 0 auto" }}>
+      {/* display a back arrow for returning to the dashboard */}
       <div style={{ textAlign: "left", marginBottom: 40 }}>
         <IconButton onClick={props.backToDash}>
           <ArrowBackIcon />
@@ -37,6 +19,7 @@ const CountryView = (props) => {
       </div>
       <Grid container spacing={5}>
         <Grid item sm={6} xs={12}>
+          {/* display the country's name followed by information about it */}
           <Typography component="h4" variant="h4" style={{ textAlign: "left", fontWeight: "bold" }}>
             {countryObject.name}
           </Typography>
@@ -71,8 +54,8 @@ const CountryView = (props) => {
           </Typography>
         </Grid>
         <Grid item sm={6} xs={12}>
+          {/* show the country's flag */}
           <img
-            className={classes.cover}
             src={countryObject.flag}
             alt="Country Flag Image"
             style={{ height: "100%", width: "100%", objectFit: "cover" }}

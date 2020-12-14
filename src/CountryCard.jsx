@@ -1,8 +1,4 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
-
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -10,46 +6,33 @@ import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
-import Divider from "@material-ui/core/Divider";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  },
-  body: {
-    textAlign: "left",
-  },
-}));
-
 const CountryCard = (props) => {
-  const { classes, countryObject } = props;
-
-  const { nodes, processors, jobs } = countryObject;
+  const { countryObject } = props;
 
   return (
-    <Card className={classes.root}>
+    <Card>
       <CardActionArea onClick={() => props.setSelectedCountry(countryObject)}>
+        {/* display the country's flag */}
         <img
-          alt="Flag Image"
+          alt="Flag"
           src={countryObject.flag}
           style={{ objectFit: "cover", height: 200, width: "100%" }}
         />
         <CardContent>
+          {/* display the country's name */}
           <Typography
             variant="h6"
             component="h3"
-            className={classes.body}
-            style={{ fontWeight: "bold" }}
+            style={{ fontWeight: "bold", textAlign: "left" }}
           >
             {countryObject.name}
           </Typography>
-
-          <Typography variant="body1" component="h4" className={classes.body}>
+          {/* display the country's population and region */}
+          <Typography
+            variant="body1"
+            component="h4"
+            style={{ textAlign: "left" }}
+          >
             Population: {countryObject.population}
             <br />
             Region: {countryObject.region}
@@ -57,6 +40,7 @@ const CountryCard = (props) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
+        {/* show a learn more button for learning more about the country */}
         <Button
           size="small"
           color="primary"
